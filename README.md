@@ -74,6 +74,15 @@ $ git commit --amend -m "chore: Create third, fourth files"
  2 files changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 test3.md
  create mode 100644 test4.md
+```
+#### Editing Commit History
+
+```bash
+$ git log --oneline
+f53c0d5 (HEAD -> main) chore: Create third, fourth files
+5aa737a chore: Create another file
+dc95d0f chore: Create initial file
+898a885 (origin/main, origin/HEAD) Initial commit
 
 airah@Assoumpta MINGW64 ~/Git-Advanced-Exercises (main)
 $ git log --oneline
@@ -83,4 +92,70 @@ dc95d0f chore: Create initial file
 898a885 (origin/main, origin/HEAD) Initial commit
 
 airah@Assoumpta MINGW64 ~/Git-Advanced-Exercises (main)
-```git log --oneline
+$ git rebase -i HEAD~2
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+airah@Assoumpta MINGW64 ~/Git-Advanced-Exercises (main)
+$ git add .
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup [-C | -c] <commit> = like "squash" but keep only the previous
+#                    commit's log message, unless -C is used, in which case
+.git/rebase-merge/git-rebase-todo [unix] (15:12 30/07/2025)                                                                       10,1 25%
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup [-C | -c] <commit> = like "squash" but keep only the previous
+#                    commit's log message, unless -C is used, in which case
+#                    keep only this commit's message; -c is same as -C but
+.git/rebase-merge/git-rebase-todo [unix] (15:12 30/07/2025)                                                                       10,1 23%
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup [-C | -c] <commit> = like "squash" but keep only the previous
+#                    commit's log message, unless -C is used, in which case
+#                    keep only this commit's message; -c is same as -C but
+#                    opens the editor
+.git/rebase-merge/git-rebase-todo [unix] (15:12 30/07/2025)                                                                       10,1 24%
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup [-C | -c] <commit> = like "squash" but keep only the previous
+#                    commit's log message, unless -C is used, in which case
+#                    keep only this commit's message; -c is same as -C but
+#                    opens the editor
+.git/rebase-merge/git-rebase-todo [unix] (15:12 30/07/2025)                                                                       10,1 20%
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup [-C | -c] <commit> = like "squash" but keep only the previous
+#                    commit's log message, unless -C is used, in which case
+#                    keep only this commit's message; -c is same as -C but
+#                    opens the editor
+# x, exec <command> = run command (the rest of the line) using shell
+.git/rebase-merge/git-rebase-todo [unix] (15:12 30/07/2025)                                                                       10,1 21%
+#
+#         message (or the oneline, if no original merge commit was
+git commit -m "wip: saving changes before rebase"
+[main e8cb2ed] wip: saving changes before rebase
+ 1 file changed, 86 insertions(+), 1 deletion(-)
+
+airah@Assoumpta MINGW64 ~/Git-Advanced-Exercises (main)
+$ git rebase -i HEAD~2
+Successfully rebased and updated refs/heads/main.
+
+airah@Assoumpta MINGW64 ~/Git-Advanced-Exercises (main)
+$ git rebase -i HEAD~2
+Successfully rebased and updated refs/heads/main.
+
+airah@Assoumpta MINGW64 ~/Git-Advanced-Exercises (main)
+$ 
+```
