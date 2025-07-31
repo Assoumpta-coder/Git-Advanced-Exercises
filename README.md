@@ -158,4 +158,32 @@ Successfully rebased and updated refs/heads/main.
 
 airah@Assoumpta MINGW64 ~/Git-Advanced-Exercises (main)
 $ 
+$ git  add .
+
+airah@Assoumpta MINGW64 ~/Git-Advanced-Exercises (main)
+$ git commit -m "Done with Editing Commit History Exercise"
+[main bdda474] Done with Editing Commit History Exercise
+ 1 file changed, 76 insertions(+), 1 deletion(-)
+
+airah@Assoumpta MINGW64 ~/Git-Advanced-Exercises (main)
+$ git push -u origin main
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (13/13), 2.63 KiB | 244.00 KiB/s, done.
+Total 13 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/Assoumpta-coder/Git-Advanced-Exercises.git
+   898a885..bdda474  main -> main
+branch 'main' set up to track 'origin/main'.
+
+airah@Assoumpta MINGW64 ~/Git-Advanced-Exercises (main)
+$
+```
+
+#### Keeping History Tidy - Squashing Commits:
+
+```bash
+
 ```
